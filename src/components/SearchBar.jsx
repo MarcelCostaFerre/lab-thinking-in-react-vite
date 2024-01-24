@@ -9,7 +9,6 @@ function SearchBar(props) {
       product.name.toLowerCase().includes(searchInput.toLowerCase())
     );
     setProducts(filteredArray);
-    
   };
   const inStockArray = (value) => {
     if (value === true) {
@@ -18,19 +17,24 @@ function SearchBar(props) {
       );
       setProducts(filteredStockArray);
       return filteredStockArray;
-    }else{return setProducts(jsonData)}
+    } else {
+      return setProducts(jsonData);
+    }
   };
   return (
     <div>
       <div>
-        <input  className="search-bar"
+        <label>Search</label>
+        <br/>
+        <input
+          className="search-bar"
           type="text"
           onChange={(e) => {
             productsFiltered(e.target.value);
           }}
         />
       </div>
-      <br/>
+      <br />
       <div>
         <input
           type="checkBox"

@@ -8,7 +8,6 @@ function ProductPage() {
   return (
     <div>
       <h1>IronStore</h1>
-      <p>Search</p>
       <SearchBar setProducts={setProducts} products={products}/>
       <br/>
       <ProductTable products={products} />
